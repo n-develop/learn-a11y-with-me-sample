@@ -11,7 +11,7 @@ import SwiftUI
 struct LearnA11yApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(productService: ProductService())
         }
     }
 }
