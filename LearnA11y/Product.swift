@@ -6,6 +6,7 @@ struct Product: Identifiable {
     let description: String
     let price: Int
     let imageName: ImageIdentifier
+    let onSale: Bool
 }
 
 enum ImageIdentifier: String {

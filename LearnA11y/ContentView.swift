@@ -28,14 +28,25 @@ struct ProductTeaser: View {
             VStack {
                 HStack {
                     Spacer()
-                    Text("Sale $\(product.price)")
+                    if product.onSale {
+                        HStack(alignment: .center){
+                            Image(systemName: "tag.fill")
+                            Text("Sale")
+                        }
                         .font(.title2)
                         .foregroundColor(.white)
                         .padding()
                         .background(Color(red: 1.0, green: 0.5, blue: 0.5, opacity: 0.9))
                         .cornerRadius(30)
-                        .padding(20)
+                    }
+                    Text("$\(product.price)")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color(red: 0.2, green: 0.7, blue: 0.7, opacity: 0.9))
+                        .cornerRadius(30)
                 }
+                .padding([.top, .trailing])
                 
                 Spacer()
                 Button {
