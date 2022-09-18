@@ -4,14 +4,19 @@ struct ContentView: View {
     let productService: ProductService
     
     var body: some View {
-        ScrollView {
-            Text("Awesome Products")
-                .font(.largeTitle)
-            
-            ForEach(productService.getProducts()) { product in
-                ProductTeaser(product: product)
+        NavigationView {
+            ScrollView {
+                ForEach(productService.getProducts()) { product in
+                    NavigationLink {
+                        ProductDetailView(product: product)
+                    } label: {
+                        ProductTeaser(product: product)
+                    }
+
+
+                }
             }
-            
+            .navigationTitle("Awesome Products")
         }
     }
     
@@ -49,18 +54,15 @@ struct ProductTeaser: View {
                 .padding([.top, .trailing])
                 
                 Spacer()
-                Button {
-                    // TODO open PDP
-                } label: {
-                    Text(product.name)
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color(red: 0.5, green: 0.5, blue: 0.5, opacity: 0.5))
-                        .cornerRadius(30)
-                        .padding(5)
-                }
-                
+
+                Text(product.name)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color(red: 0.5, green: 0.5, blue: 0.5, opacity: 0.5))
+                    .cornerRadius(30)
+                    .padding(5)
+
             }
         }
     }
@@ -68,15 +70,19 @@ struct ProductTeaser: View {
 
 struct ProductDetailView: View {
     @State private var useDiscount: Bool = false
+
+    let product: Product
+
     var price: Int {
-        useDiscount ? 299 : 349
+        useDiscount ? Int(Double(product.price) * 0.8) : product.price
     }
+
     var body: some View {
         VStack {
-            Text("Awesome product")
+            Text(product.name)
                 .font(.largeTitle)
             Spacer()
-            Text("This product is just perfect. It's small, pretty, and very expensive.")
+            Text(product.description)
             Spacer()
             Toggle(isOn: $useDiscount) {
                 Text("Use discount")
