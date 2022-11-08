@@ -1,30 +1,5 @@
 import SwiftUI
 
-struct ContentView: View {
-    @State private var showInputSheet: Bool = false
-    let tootService: TootService
-    
-    var body: some View {
-        VStack {
-            HStack (spacing: 0){
-                Text("Toot")
-                    .bold()
-                    .italic()
-                Text("orial 🐘")
-            }
-            .font(.title)
-            
-            List {
-                ForEach(tootService.getToots()) { toot in
-                    TootView(toot: toot)
-                }
-            }
-            .background(Color.green)
-            
-        }
-    }
-}
-
 struct TootView: View {
     let toot: Toot
     
@@ -33,7 +8,9 @@ struct TootView: View {
             VStack {
                 Image(systemName: "person.circle.fill")
                     .resizable()
+                    .foregroundColor(.random)
                     .frame(width: 60, height: 60)
+                
                 Text(toot.author)
                     .font(.caption)
             }
@@ -63,8 +40,14 @@ struct TootView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TootView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(tootService: TootService())
+        let toot = Toot(
+            id: "1",
+            post: "This is a mastodon post #introduction",
+            author: "@tootorial_31"
+        )
+        return TootView(toot: toot)
+            .previewLayout(.sizeThatFits)
     }
 }

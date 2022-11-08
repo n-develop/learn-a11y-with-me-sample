@@ -13,6 +13,8 @@
 		28768C7C28B2725E00642EBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28768C7B28B2725E00642EBC /* ContentView.swift */; };
 		28768C7E28B2726000642EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28768C7D28B2726000642EBC /* Assets.xcassets */; };
 		28768C8128B2726000642EBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28768C8028B2726000642EBC /* Preview Assets.xcassets */; };
+		7AC561E1291AC79C0055A220 /* TootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC561E0291AC79C0055A220 /* TootView.swift */; };
+		7AC561E3291AC8530055A220 /* Color+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC561E2291AC8530055A220 /* Color+random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		28768C7B28B2725E00642EBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		28768C7D28B2726000642EBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28768C8028B2726000642EBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7AC561E0291AC79C0055A220 /* TootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TootView.swift; sourceTree = "<group>"; };
+		7AC561E2291AC8530055A220 /* Color+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +60,12 @@
 			isa = PBXGroup;
 			children = (
 				28768C7D28B2726000642EBC /* Assets.xcassets */,
-				28768C7B28B2725E00642EBC /* ContentView.swift */,
+				7AC561E2291AC8530055A220 /* Color+random.swift */,
 				28768C7928B2725E00642EBC /* LearnA11yApp.swift */,
+				7AC561DD291AC7640055A220 /* Models */,
 				28768C7F28B2726000642EBC /* Preview Content */,
-				28155B4A28B2B86A000457A0 /* Toot.swift */,
-				28155B4828B2B81F000457A0 /* TootService.swift */,
+				7AC561DE291AC7720055A220 /* Services */,
+				7AC561DF291AC78C0055A220 /* Views */,
 			);
 			path = LearnA11y;
 			sourceTree = "<group>";
@@ -71,6 +76,31 @@
 				28768C8028B2726000642EBC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7AC561DD291AC7640055A220 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28155B4A28B2B86A000457A0 /* Toot.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7AC561DE291AC7720055A220 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				28155B4828B2B81F000457A0 /* TootService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7AC561DF291AC78C0055A220 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28768C7B28B2725E00642EBC /* ContentView.swift */,
+				7AC561E0291AC79C0055A220 /* TootView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +175,9 @@
 			files = (
 				28768C7C28B2725E00642EBC /* ContentView.swift in Sources */,
 				28155B4B28B2B86A000457A0 /* Toot.swift in Sources */,
+				7AC561E3291AC8530055A220 /* Color+random.swift in Sources */,
 				28768C7A28B2725E00642EBC /* LearnA11yApp.swift in Sources */,
+				7AC561E1291AC79C0055A220 /* TootView.swift in Sources */,
 				28155B4928B2B81F000457A0 /* TootService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnA11y/Preview Content\"";
-				DEVELOPMENT_TEAM = 9SU4M8X58R;
+				DEVELOPMENT_TEAM = 57YTC78M9A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -305,7 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnA11y/Preview Content\"";
-				DEVELOPMENT_TEAM = 9SU4M8X58R;
+				DEVELOPMENT_TEAM = 57YTC78M9A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
