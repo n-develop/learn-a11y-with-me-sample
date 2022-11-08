@@ -4,7 +4,7 @@ import SwiftUI
 struct LearnA11yApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(productService: ProductService())
+            ContentView(tootService: TootService())
         }
     }
 }
