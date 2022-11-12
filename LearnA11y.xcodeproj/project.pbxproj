@@ -14,7 +14,8 @@
 		28768C7E28B2726000642EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28768C7D28B2726000642EBC /* Assets.xcassets */; };
 		28768C8128B2726000642EBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28768C8028B2726000642EBC /* Preview Assets.xcassets */; };
 		7AC561E1291AC79C0055A220 /* TootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC561E0291AC79C0055A220 /* TootView.swift */; };
-		7AC561E3291AC8530055A220 /* Color+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC561E2291AC8530055A220 /* Color+random.swift */; };
+		7AC561E3291AC8530055A220 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC561E2291AC8530055A220 /* Color+Random.swift */; };
+		7AC561E5291ACDDF0055A220 /* ThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC561E4291ACDDF0055A220 /* ThreadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +27,8 @@
 		28768C7D28B2726000642EBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28768C8028B2726000642EBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7AC561E0291AC79C0055A220 /* TootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TootView.swift; sourceTree = "<group>"; };
-		7AC561E2291AC8530055A220 /* Color+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+random.swift"; sourceTree = "<group>"; };
+		7AC561E2291AC8530055A220 /* Color+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
+		7AC561E4291ACDDF0055A220 /* ThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				28768C7D28B2726000642EBC /* Assets.xcassets */,
-				7AC561E2291AC8530055A220 /* Color+random.swift */,
+				7AC561E2291AC8530055A220 /* Color+Random.swift */,
 				28768C7928B2725E00642EBC /* LearnA11yApp.swift */,
 				7AC561DD291AC7640055A220 /* Models */,
 				28768C7F28B2726000642EBC /* Preview Content */,
@@ -99,6 +101,7 @@
 			children = (
 				28768C7B28B2725E00642EBC /* ContentView.swift */,
 				7AC561E0291AC79C0055A220 /* TootView.swift */,
+				7AC561E4291ACDDF0055A220 /* ThreadView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,8 +178,9 @@
 			files = (
 				28768C7C28B2725E00642EBC /* ContentView.swift in Sources */,
 				28155B4B28B2B86A000457A0 /* Toot.swift in Sources */,
-				7AC561E3291AC8530055A220 /* Color+random.swift in Sources */,
+				7AC561E3291AC8530055A220 /* Color+Random.swift in Sources */,
 				28768C7A28B2725E00642EBC /* LearnA11yApp.swift in Sources */,
+				7AC561E5291ACDDF0055A220 /* ThreadView.swift in Sources */,
 				7AC561E1291AC79C0055A220 /* TootView.swift in Sources */,
 				28155B4928B2B81F000457A0 /* TootService.swift in Sources */,
 			);
