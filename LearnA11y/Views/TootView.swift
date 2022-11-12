@@ -1,3 +1,4 @@
+import Foundation
 import SwiftUI
 
 struct TootView: View {
@@ -19,20 +20,28 @@ struct TootView: View {
                 Text(toot.post)
                 HStack(spacing: 15) {
                     Button {
+                        debugPrint("Comment action")
                         // TODO: add "comment" action
                     } label: {
                         Image(systemName: "arrowshape.turn.up.backward")
                     }
+                    .buttonStyle(.borderless)
+                    
                     Button {
+                        debugPrint("Boost action")
                         // TODO: add "boost" action
                     } label: {
                         Image(systemName: "repeat")
                     }
+                    .buttonStyle(.borderless)
+                    
                     Button {
+                        debugPrint("Favorite action")
                         // TODO: add "favorite" action
                     } label: {
                         Image(systemName: "star")
                     }
+                    .buttonStyle(.borderless)
                 }
             }
         }
