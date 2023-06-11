@@ -7,6 +7,9 @@ struct ComposeTootView: View {
 
     var body: some View {
         VStack {
+            Image(systemName: "square.and.pencil")
+                .resizable()
+                .frame(width: 50, height: 50)
             TextField("Your toot goes here...", text: $toot)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
@@ -14,7 +17,8 @@ struct ComposeTootView: View {
                 sendToot(toot)
                 presentationMode.wrappedValue.dismiss()
             }
-            .padding()
+            .padding(.horizontal, 50)
+            .padding(.vertical, 10)
             .background {
                 Color.blue
             }

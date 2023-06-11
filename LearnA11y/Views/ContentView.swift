@@ -35,6 +35,7 @@ struct ContentView: View {
                         showComposeSheet = true
                     }
                     .font(.title)
+                    Text(showReponses ? " " : "").hidden()
                 }
                 ToolbarItem(placement: .principal) {
                     HStack (spacing: 0){
@@ -51,7 +52,7 @@ struct ContentView: View {
             })
             .sheet(isPresented: $showComposeSheet, content: {
                 ComposeTootView { tootText in
-                    debugPrint("Toot: \(tootText)")
+                    tootService.post(text: tootText)
                 }
             })
         }

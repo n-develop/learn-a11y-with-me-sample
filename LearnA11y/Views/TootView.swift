@@ -15,6 +15,7 @@ struct TootView: View {
                 Text(toot.author)
                     .font(.caption)
             }
+            .frame(width: 80)
             VStack(alignment: .leading, spacing: 8) {
                 
                 Text(toot.post)
@@ -54,7 +55,7 @@ struct TootView_Previews: PreviewProvider {
         let toot = Toot(
             id: "1",
             post: "This is a mastodon post #introduction",
-            author: "@tootorial_31"
+            author: "@tootorial_1"
         )
         return TootView(toot: toot)
             .previewLayout(.sizeThatFits)

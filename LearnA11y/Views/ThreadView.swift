@@ -10,7 +10,7 @@ struct ThreadView: View {
             ForEach(responses) { response in
                 HStack {
                     Image(systemName: "arrow.turn.down.right")
-                        .font(.title)
+                        .font(.headline)
                     TootView(toot: response)
                 }
             }
