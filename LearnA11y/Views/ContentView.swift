@@ -38,13 +38,15 @@ struct ContentView: View {
                     Text(showReponses ? " " : "").hidden()
                 }
                 ToolbarItem(placement: .principal) {
-                    HStack (spacing: 0){
+                    HStack (spacing: 0) {
                         Text("Toot")
                             .bold()
                             .italic()
                         Text("orial 🐘")
                     }
                     .font(.title)
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel("Tootorial")
                 }
             }
             .sheet(item: $activeToot, content: { toot in
